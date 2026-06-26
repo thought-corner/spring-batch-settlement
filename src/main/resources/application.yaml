@@ -22,4 +22,5 @@ spring:
       initialize-schema: always
     job:
       # 컨텍스트 기동과 동시에 잡이 도는 것을 막는다. 어떤 잡을 언제 돌릴지 명시적으로 제어.
-      enabled: false
+      # Jenkins에 위임할 것이므로 false -> true 변경
+      enabled: true
