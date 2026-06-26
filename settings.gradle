@@ -1,1 +1,7 @@
+plugins {
+    // JDK17이 설치돼 있지 않은 환경(예: JDK21만 있는 Jenkins 컨테이너)에서도
+    // Gradle이 toolchain(JDK17)을 자동으로 내려받아 빌드할 수 있게 한다.
+    id 'org.gradle.toolchains.foojay-resolver-convention' version '1.0.0'
+}
+
 rootProject.name = 'settlement-batch'
