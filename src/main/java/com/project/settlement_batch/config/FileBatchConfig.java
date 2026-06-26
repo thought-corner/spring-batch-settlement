@@ -15,7 +15,8 @@ import org.springframework.transaction.PlatformTransactionManager;
 
 import java.time.Clock;
 
-@Configuration
+//@Configuration
+@Deprecated
 @RequiredArgsConstructor
 public class FileBatchConfig {
 

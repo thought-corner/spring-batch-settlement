@@ -18,7 +18,8 @@ import org.springframework.transaction.PlatformTransactionManager;
 import java.util.Arrays;
 
 @Slf4j
-@Configuration
+//@Configuration
+@Deprecated
 @RequiredArgsConstructor
 public class MenuChunkConfig {
 

@@ -13,6 +13,7 @@ import java.time.Clock;
 import java.time.LocalDate;
 
 @Slf4j
+@Deprecated
 @RequiredArgsConstructor
 public class FileCleanupTasklet implements Tasklet {
 

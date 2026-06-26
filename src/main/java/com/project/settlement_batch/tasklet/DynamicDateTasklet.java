@@ -11,10 +11,11 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Slf4j
-@Component
+//@Component
+@Deprecated
 // @StepScope: 빈 생성을 Step 실행 순간까지 미루는 '늦은 바인딩'의 핵심.
 // 없으면 기동 때 싱글톤으로 생성돼, 그 시점엔 jobParameters가 없어 SpEL 평가가 실패한다.
-@StepScope
+//@StepScope
 public class DynamicDateTasklet implements Tasklet {
 
     private final String requestDate;

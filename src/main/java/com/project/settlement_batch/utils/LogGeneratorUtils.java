@@ -9,6 +9,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 @Slf4j
+@Deprecated
 @UtilityClass
 public final class LogGeneratorUtils {
 
