@@ -10,9 +10,7 @@ spring:
 
   jpa:
     hibernate:
-      # validate: 엔티티와 실제 스키마가 어긋나면 기동 단계에서 막는 운영 안전값.
-      # 스키마를 아직 만들기 전 초기 개발이라면 update 로 바꿔 자동 생성하게 한다.
-      ddl-auto: validate
+      ddl-auto: update
     properties:
       hibernate:
         format_sql: true

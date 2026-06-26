@@ -2,7 +2,9 @@ package com.project.settlement_batch;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
+@EnableScheduling
 @SpringBootApplication
 public class SettlementBatchApplication {
 
@@ -15,8 +17,11 @@ public class SettlementBatchApplication {
 	 *
 	 * <p>걀과적으로, 0이면 정상 종료, 1이면 비정상 종료임을 알 수 있다.
 	 */
-	public static void main(String[] args) {
-		System.exit(SpringApplication.exit(SpringApplication.run(SettlementBatchApplication.class, args)));
-	}
+//	public static void main(String[] args) {
+//		System.exit(SpringApplication.exit(SpringApplication.run(SettlementBatchApplication.class, args)));
+//	}
 
+	public static void main(String[] args) {
+		SpringApplication.run(SettlementBatchApplication.class, args);
+	}
 }
