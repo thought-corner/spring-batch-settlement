@@ -2,6 +2,7 @@ package com.project.settlement_batch.config;
 
 import com.project.settlement_batch.domain.Orders;
 import com.project.settlement_batch.domain.Settlement;
+import com.project.settlement_batch.listener.JobLoggerListener;
 import jakarta.persistence.EntityManagerFactory;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -32,10 +33,12 @@ public class SettlementBatchConfig {
     private final JobRepository jobRepository;
     private final PlatformTransactionManager transactionManager;
     private final EntityManagerFactory entityManagerFactory;
+    private final JobLoggerListener jobLoggerListener;
 
     @Bean(name = "settlementJob")
     public Job settlementJob() {
         return new JobBuilder("settlementJob", jobRepository)
+                .listener(jobLoggerListener)
                 .start(settlementStep())
                 .build();
     }
